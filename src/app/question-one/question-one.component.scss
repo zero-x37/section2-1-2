@@ -1,0 +1,22 @@
+.container {
+  display: flex;
+  min-width: 600px;
+
+  &__form {
+    display: flex;
+    width: 100%;
+
+    &__box-1 {
+      width: 200px;
+    }
+
+    &__box-2 {
+      min-width: 100px;
+      flex: 1;
+    }
+
+    &__box-3 {
+      width: 300px;
+    }
+  }
+}

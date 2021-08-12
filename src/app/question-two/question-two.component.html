@@ -1,0 +1,10 @@
+<input type="text" ngModel (ngModelChange)="onSearch($event)" />
+<button class="button" routerLink="/question-1">Question-1</button>
+<table class="table">
+  <tr>
+    <th>Categories</th>
+  </tr>
+  <tr *ngFor="let i of filterData">
+    <td>{{ i }}</td>
+  </tr>
+</table>
