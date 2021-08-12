@@ -45,21 +45,22 @@ export class QuestionOneComponent implements OnInit {
       }
     }
 
-    this.onSelectChange(this.form.value.option);
+    this.updateAnswer(this.form.value.option);
   }
 
   onSelectChange(event: string): void {
-    const value = this.form.value.value;
+    this.updateAnswer(event);
+  }
 
+  private updateAnswer(option: string): void {
+    const value = this.form.value.value;
     if (typeof value == 'number') {
-      switch (event) {
+      switch (option) {
         case 'prime': {
           this.answer = this.checkPrime(value);
           break;
         }
         case 'fibo': {
-          console.log(this.checkFibo(value), value);
-
           this.answer = this.checkFibo(value);
           break;
         }
